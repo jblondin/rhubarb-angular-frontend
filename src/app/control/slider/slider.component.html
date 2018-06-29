@@ -1,0 +1,11 @@
+<mat-slider
+    min="0"
+    [max]="properties.values.length - 1"
+    step="1"
+    tickInterval="1"
+    [value]="properties.curr_value"
+    thumbLabel
+    [displayWith]="formatThumbLabel.bind(this)"
+    (input)="onSliderChange($event)"
+    >
+</mat-slider>

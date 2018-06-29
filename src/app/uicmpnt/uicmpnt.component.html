@@ -1,0 +1,15 @@
+<div *ngIf="component.panel">
+    <app-panel
+        [layout]="layout"
+        [children]="component.panel.children"
+        (controlEvent)="onControlEvent($event)">
+    </app-panel>
+</div>
+<div *ngIf="component.control">
+    <app-control
+        [type]="component.control.type"
+        [properties]="component.control.properties"
+        [index]="index"
+        (controlEvent)="onControlEvent($event)">
+    </app-control>
+</div>

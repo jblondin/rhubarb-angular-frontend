@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let child of children">
+        <ui-component
+            [layout]="layout"
+            [component]="layout.component_store[child]"
+            [index]="child"
+            (controlEvent)="onControlEvent($event)">
+        </ui-component>
+    </div>
+</div>

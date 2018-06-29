@@ -1,0 +1,13 @@
+<div *ngIf="type" [ngSwitch]="type">
+    <control-button
+        *ngSwitchCase="'button'"
+        [properties]="properties"
+        (clickEvent)="onControlEvent($event)">
+    </control-button>
+    <control-slider
+        *ngSwitchCase="'slider'"
+        [properties]="properties"
+        (updateEvent)="onControlEvent($event)">
+    </control-slider>
+    <control-unknown *ngDefault [type]="type"></control-unknown>
+</div>
