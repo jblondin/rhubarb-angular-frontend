@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// import { Pipe, PipeTransform } from '@angular/core';
 import { Plotly } from './plotly/plotly.service';
 import { ControlEvent } from './control/control/control.component'
 
@@ -37,7 +36,6 @@ export class Panel {
 export class Control {
   type: string;
   properties: Properties;
-  // effects: Effect[];
 }
 export type Properties = any;
 
@@ -54,37 +52,3 @@ export class EventMessage {
   event: ControlEvent;
   idx: number;
 }
-// @Injectable({ providedIn: 'root' })
-// export class LayoutService {
-//   getUiComponent(layout: Layout, index: number): UiComponent {
-//     return layout.component_store[index];
-//   }
-// }
-
-// export enum StateValue { Selected }
-
-// export class Effect {
-//   attr: string;
-//   value?: any;
-// }
-
-// @Injectable({ providedIn: 'root' })
-// export class EffectGenerate {
-//   generate(effect: Effect, override: any): object {
-//     if (effect.value) {
-//       return { [effect.attr]: effect.value };
-//     } else {
-//       return { [effect.attr]: override };
-//     }
-//   }
-// }
-
-// @Pipe({name: 'effectParser'})
-// export class EffectParserPipe implements PipeTransform {
-//   transform(value: any): Effect {
-//     if (value.attr) {
-//       console.log("has attr");
-//     }
-//     return { attr: "foo", value: StateValue.Selected };
-//   }
-// }

@@ -16,7 +16,6 @@ export class RhubarbService {
   getGraphContainer(): Observable<InitialContainer> {
     const url = `${this.rhubarbUrl}/graph`;
     return this.http.get<InitialContainer>(url).pipe(
-      // tap(_ => console.log('fetched graph')),
       catchError(this.handleError<InitialContainer>())
     );
   }
@@ -27,7 +26,6 @@ export class RhubarbService {
     };
     // console.log(`calling post ${url} with state ${state}`);
     return this.http.post<UpdateContainer>(url, state, httpOptions).pipe(
-      // tap(_ => console.log('retrieved new graph')),
       catchError(this.handleError<UpdateContainer>())
     );
   }
